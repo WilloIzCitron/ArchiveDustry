@@ -1,7 +1,7 @@
 const lib = require("soundlib");
 
 Events.on(GameOverEvent, event => {
-    const mySound = lib.loadSound("lose");
+    const mySound = lib.loadMusic("lose");
     // engine will spawn this sound at this location (X,Y)
     mySound.at(1, 1);
   })
@@ -9,7 +9,7 @@ Events.on(GameOverEvent, event => {
 
   // sector captured = win
 Events.on(SectorCaptureEvent, event => {
-    const mySound = lib.loadSound("win");
+    const mySound = lib.loadMusic("win");
     // engine will spawn this sound at this location (X,Y)
     mySound.at(1, 1);
   })
