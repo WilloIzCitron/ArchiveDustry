@@ -1,4 +1,4 @@
-const lib = require('soundlib');
+const lib = require("soundlib");
 
 Events.on(GameOverEvent, event => {
     const mySound = lib.loadSound("lose");
