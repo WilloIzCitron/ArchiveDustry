@@ -14,8 +14,10 @@ Events.on(GameOverEvent, winner => {
         mySound.play();
     }
     
-    Vars.ui.restart.hidden(() => Vars.tree.loadMusic("lose").stop());
-    Vars.ui.restart.hidden(() => Vars.tree.loadMusic("win").stop());
+    Vars.ui.restart.hidden(() => {
+        Vars.tree.loadMusic("lose").stop();
+        Vars.tree.loadMusic("win").stop();
+    });
   })
 
 
