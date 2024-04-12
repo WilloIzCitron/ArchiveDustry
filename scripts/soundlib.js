@@ -3,7 +3,7 @@ exports.loadSound = (() => {
     return (path) => {
         const c = cache[path];
         if (c === undefined) {
-            return cache[path] = loadSound(path);
+            return cache[path] = Vars.tree.loadSound(path);
         }
         return c;
     }
@@ -13,7 +13,7 @@ exports.loadMusic = (() => {
     return (path) => {
         const c = cache[path];
         if (c === undefined) {
-            return cache[path] = loadMusic(path);
+            return cache[path] = Vars.tree.loadMusic(path);
         }
         return c;
     }
