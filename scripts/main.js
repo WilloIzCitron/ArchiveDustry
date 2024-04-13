@@ -20,6 +20,15 @@ Events.on(GameOverEvent, winner => {
     });
   })
 
+Vars.ui.research.shown(() => {
+    Vars.tree.loadMusic("research").islooping(true)
+    Vars.tree.loadMusic("research").play()
+})
+
+Vars.ui.research.hidden(() => {
+    Vars.tree.loadMusic("research").islooping(false)
+    Vars.tree.loadMusic("research").stop()
+})
 
   // sector captured = win
 Events.on(SectorCaptureEvent, event => {
