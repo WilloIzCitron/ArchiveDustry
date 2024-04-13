@@ -4,6 +4,7 @@ Events.on(ClientLoadEvent, () => {
     Vars.tree.loadMusic("research").setLooping(true);
     Vars.tree.loadMusic("database").setLooping(true);
     Vars.ui.research.shown(() => {
+        Vars.control.sound.stop();
         Vars.tree.loadMusic("research").play();
     });
     
@@ -12,6 +13,7 @@ Events.on(ClientLoadEvent, () => {
     });
 
     Vars.ui.database.shown(() => {
+        Vars.control.sound.stop();
         Vars.tree.loadMusic("database").play();
     });
     
