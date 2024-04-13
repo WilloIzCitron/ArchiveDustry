@@ -20,25 +20,21 @@ Events.on(ClientLoadEvent, () => {
     });
 })
 
-Events.on(GameOverEvent, winner => {
-    if(Vars.state.rules.pvp){
-    if(winner.team().id == Vars.player.team().id){
+Events.on(WinEvent, winner => {
         const mySound2 = lib.loadMusic("win");
         mySound2.play();
-    } else {
+        Vars.ui.restart.hidden(() => {
+            Vars.tree.loadMusic("win").stop();
+     });
+})
+Events.on(LoseEvent, winner => {
         const mySound = lib.loadMusic("lose");
         mySound.play();
-    }
-    } else {
-        const mySound = lib.loadMusic("lose");
-        mySound.play();
-    }
-    
-    Vars.ui.restart.hidden(() => {
-        Vars.tree.loadMusic("lose").stop();
-        Vars.tree.loadMusic("win").stop();
-    });
-  })
+        Vars.ui.restart.hidden(() => {
+            Vars.tree.loadMusic("lose").stop();
+     });
+})
+
 
   // sector captured = win
 Events.on(SectorCaptureEvent, event => {
