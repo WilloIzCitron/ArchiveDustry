@@ -6,7 +6,7 @@ Events.on(ClientLoadEvent, () => {
     Vars.ui.research.shown(() => {
         Musics.menu.stop();
         Musics.launch.stop();
-        Vars.tree.loadMusic("research").setLooping(true).play();
+        Vars.tree.loadMusic("research").play();
     });
     
     Vars.ui.research.hidden(() => {
@@ -16,7 +16,7 @@ Events.on(ClientLoadEvent, () => {
     Vars.ui.database.shown(() => {
         Musics.menu.stop();
         Musics.launch.stop();
-        Vars.tree.loadMusic("database").setLooping(true).play();
+        Vars.tree.loadMusic("database").play();
     });
     
     Vars.ui.database.hidden(() => {
