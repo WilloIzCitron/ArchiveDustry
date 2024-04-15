@@ -1,5 +1,7 @@
 # ArchiveDustry
 
+- This mod was being migrated to Java Version, [WilloIzCitron/ArchiveDustry-Java](https://github.com/WilloIzCitron/ArchiveDustry-Java)
+  
 A mod that overide the vanilla soundtrack into Blue Archive Soundtrack. This mod is unaffiliated with developer of  Blue Archive game: Nexon, NAT GAMES dan Yostar.
 
 ## Music List
